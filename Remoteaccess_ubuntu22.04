@@ -1,0 +1,18 @@
+Remote Access prompt
+
+> Issue -Every time a prompt occured to allow for remote access in UBUNTU 22.04
+
+> Reason found - Wayland GENOME as default install in Ubuntu 22.04
+
+> Solution worked - change in config file 
+                    Navigate /etc/gdm3/custom.conf
+                    enter password
+                    via VIM - 
+                            sudo vim /etc/gdm3/custom.conf - 
+                                                               # Uncomment the line below to force the login screen to use Xorg
+                                                               #WaylandEnable=false
+                            x (to delete # to uncomment line)
+                            :wq (save and exit)
+                            
+ > other comments - to get sudo permission (if its needed) - sudo chmod a+rwx /etc/gdm3 
+                              
