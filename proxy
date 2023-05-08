@@ -1,0 +1,13 @@
+#In case of secure network such as sophos in the specified area network
+#ubuntu linux system require LAN user-password-proxy-port
+#steps to follow
+sudo touch /etc/apt/apt.conf.d/proxy.conf
+sudo vi /etc/apt/apt.conf.d/proxy.conf
+i
+Acquire::http::Proxy "http://user:password@proxy.server:port/";
+Acquire::https::Proxy "http://user:password@proxy.server:port/";
+Acquire::http::FTP_Proxy "http://user:password@proxy.server:port/";
+esc
+:wa
+
+#sudo apt-get will work 
