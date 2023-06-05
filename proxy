@@ -11,3 +11,12 @@ esc
 :wa
 
 #sudo apt-get will work 
+
+
+##########
+WSL 
+Vim saving issue
+open with permission as 
+sudo vi proxy.conf
+*edit
+:wq / :x / :w 
